@@ -1,0 +1,87 @@
+@font-face
+{
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+    font-family: Delicious-Bold;
+    src: url('font/Delicious-Bold.otf') format("opentype");
+}
+@font-face
+{
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+    font-family: Delicious-Heavy;
+    src: url('font/Delicious-Heavy.otf') format("opentype");
+}
+
+.border {
+    position: relative;
+    width:376px;
+}
+
+.border h1 {
+    position: absolute;
+    font-family: Delicious-Heavy;
+    color: #999999;
+    user-select: none;
+    -webkit-user-select: none;
+    top: 26px;
+    width:376px;
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: .1em;
+    text-shadow: #dddddd 1px 1px, #666666 -1px -1px;
+}
+
+.border .upLeftCorner:before, .upLeftCorner:after, .upRightCorner:before, .upRightCorner:after {
+    position: absolute;
+    content: "";
+    top: 32px;
+    width: 8px;
+    height: 8px;
+    background: #dddddd;
+    background: -webkit-gradient(radial, 66% 66%, 4, 66% 66%, 3, from(#dddddd), to(#666666));
+    border-radius: 6px 0 0 0;
+}
+.border .upLeftCorner:after, .upRightCorner:after {
+    top: 38px;
+    left: 6px;
+    border-radius: 0;
+    background: #aaaaaa;
+}
+
+.border .upRightCorner:before {
+    left: 370px;
+    background: -webkit-gradient(radial, 33% 66%, 4, 33% 66%, 3, from(#dddddd), to(#666666));
+    border-radius: 0 6px 0 0;
+}
+
+.border .upRightCorner:after {
+    left: 364px;
+}
+
+.border .left:before,  .left:after, .right:before, .right:after {
+    position: absolute;
+    content: "";
+    background: #dddddd;
+    background: -webkit-gradient(linear, 20% 0%, 40% 00%,  from(#dddddd), to(#666666));
+    top: 32px;
+    left: 6px;
+    width: 6px;
+    height: 406px;
+    border-radius: 0;
+}
+
+.border .right:before {
+    left: 366px;
+    background: -webkit-gradient(linear, 60% 0%, 80% 00%,  from(#666666), to(#dddddd));
+}
+.border .left:after, .right:after {
+    left: 8px;
+    width: 30px;
+    height: 6px;
+    background: -webkit-gradient(linear, 0% 20%, 0% 40%,  from(#dddddd), to(#666666));
+    -webkit-transform: skewX(30deg);
+}
+
+.border .right:after {
+    left: 340px;
+    -webkit-transform: skewX(-30deg);
+}

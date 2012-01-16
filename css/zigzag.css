@@ -1,0 +1,75 @@
+.zigzag {
+    position: relative;
+    width:185px;
+}
+
+.zigzag .back:before {
+    position:absolute;
+    content: "";
+    left:0px;
+    top:-4px;
+    width:185px;
+    height:58px;
+    background: #aaaaaa;
+}
+
+.zigzag .line:before, .line:after {
+    position: absolute;
+    content: "";
+    background: #dddddd;
+    background: -webkit-gradient(linear, 0% 20%, 0% 40%,  from(#dddddd), to(#666666));
+    top: 22px;
+    width:34px;
+    height:6px;
+    border-radius: 0px 3px 0px 0px;
+}
+
+.zigzag .line:after {
+    left: 150px;
+    width:36px;
+    border-radius: 0px 0px 0px 3px;
+}
+
+.zigzag .third {
+    position: absolute;
+    left: 108px;
+}
+
+.zigzag .second {
+    position: absolute;
+    left: 69px;
+}
+
+.zigzag .first {
+    position: absolute;
+    left: 30px;
+}
+
+.zigzag .first:before, .first:after, .second:before, .second:after, .third:before, .third:after, .last {
+    position:absolute;
+    content: "";
+    width:6px;
+    height:50px;
+    background: #dddddd;
+    background: -webkit-gradient(linear, 30% 0%, 50% 00%,  from(#dddddd), to(#666666));
+    -webkit-transform: rotate(25deg);
+    border-radius: 3px;
+}
+
+.zigzag .first:before {
+    top: 2px;
+    left: 5px;
+    height:27px;
+}
+
+.zigzag .last {
+    top: 21px;
+    left: 143px;
+    height:29px;
+}
+
+.zigzag .first:after, .second:after, .third:after {
+    left: 20px;
+    -webkit-transform: rotate(-25deg);
+}
+
