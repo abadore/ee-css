@@ -1,0 +1,148 @@
+.resistor {
+    position: relative;
+    width:186px;
+}
+.resistor .center, .centerFront, .tip, .firstBand, .secondBand, .thirdBand, .fourthBand {
+    position: relative;
+    z-index: 1;
+}
+.resistor .back, .wire {
+    position: relative;
+    z-index: -1;
+}
+.resistor .back:before {
+    position:absolute;
+    content: "";
+    left:0px;
+    top:-4px;
+    width:186px;
+    height:48px;
+    background: #aaaaaa;
+}
+.resistor .wire:before {
+    position:absolute;
+    content: "";
+    background: #666666;
+    border-left: hidden;
+    border-right: hidden;
+    top: 18px;
+    left: 0px;
+    width:186px;
+    height:6px;
+    background: -webkit-gradient(linear, 0% 20%, 0% 80%,  from(#dddddd), to(#666666));
+}
+
+.resistor .center:before {
+    position:absolute;
+    content: "";
+    background: #666600;
+    border-left: hidden;
+    border-right: hidden;
+    top: 4px;
+    left: 66px;
+    width:54px;
+    height:32px;
+    background: -webkit-gradient(linear, 0% 10%, 0% 60%,  from(#f5f5dc), to(#666600));
+}
+
+.resistor .tip:before, .tip:after {
+    position:absolute;
+    content: "";
+    background: #666600;
+    border-left: hidden;
+    border-right: hidden;
+    top: 18px;
+    left: 38px;
+    width:3px;
+    height:6px;
+}
+
+.resistor .tip:after {
+    left: 145px;
+}
+
+.resistor .centerFront:before {
+    position:absolute;
+    content: "";
+    background: #666600;
+    border-left: hidden;
+    border-right: hidden;
+    top: 4px;
+    left: 70px;
+    width:46px;
+    height:32px;
+    background: -webkit-gradient(linear, 0% 10%, 0% 60%,  from(#f5f5dc), to(#666600));
+}
+
+.resistor .firstBand:before {
+    position:absolute;
+    content: "";
+    background: #000000;
+    top: 0px;
+    left: 58px;
+    width:10px;
+    height:40px;
+}
+
+.resistor .firstBand:after {
+    position:absolute;
+    content: "";
+    left: 38px;
+    top: -2px;
+    width:40px;
+    height:40px;
+    border: 2px solid #aaaaaa;
+    border-radius: 60px;
+}
+
+.resistor .fourthBand:before {
+    position:absolute;
+    content: "";
+    background: #ffcc00;
+    top: 0px;
+    left: 118px;
+    width:10px;
+    height:40px;
+}
+
+.resistor .fourthBand:after {
+    position:absolute;
+    content: "";
+    left: 104px;
+    top: -2px;
+    width:40px;
+    height:40px;
+    border: 2px solid #aaaaaa;
+    border-radius: 60px;
+}
+
+.resistor .secondBand:before, .thirdBand:before {
+    position:absolute;
+    content: "";
+    background: #000000;
+    top: 4px;
+    left: 76px;
+    width:10px;
+    height:32px;
+}
+
+.resistor .thirdBand:before {
+    left: 94px;
+}
+
+.resistor:before, .resistor:after {
+    position:absolute;
+    content: "";
+    left: 40px;
+    width: 40px;
+    height:40px;
+    border-bottom: hidden;
+    background: #666600;
+    background: -webkit-gradient(radial, 70% 0%, 10, 70% 0%,30, from(#f5f5dc), to(#666600));
+    border-radius: 60px;
+}
+
+.resistor:after {
+    background: -webkit-gradient(radial, 30% 0%, 10, 30% 0%, 30, from(#f5f5dc), to(#666600));
+    left: 106px;
+}
