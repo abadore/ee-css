@@ -1,8 +1,22 @@
+@-webkit-keyframes colors {
+    0%  {background-color: #000000; }   /* black 0 */
+    10%  {background-color: #964B00; }  /* brown 1 */
+    20%  {background-color: #FF0000; }  /* red 2 */
+    30%  {background-color: #FFA500; }  /* orange 3 */
+    40%  {background-color: #FFFF00; }  /* yellow 4 */
+    50%  {background-color: #9ACD32; }  /* green 5 */
+    60%  {background-color: #6495ED; }  /* blue 6 */
+    70%  {background-color: #EE82EE; }  /* violet 7 */
+    80%  {background-color: #A0A0A0; }  /* gray 8 */
+    90%  {background-color: #FFFFFF; }  /* white 9 */
+    100%  {background-color: #CFB53B; } /* gold 5% tolerance */
+}
+
 .resistor {
     position: relative;
     width:186px;
 }
-.resistor .center, .centerFront, .tip, .firstBand, .secondBand, .thirdBand, .fourthBand {
+.resistor .center, .centerFront, .tip, .bandMask, .firstBand, .secondBand, .thirdBand, .fourthBand {
     position: relative;
     z-index: 1;
 }
@@ -61,6 +75,21 @@
     left: 145px;
 }
 
+.resistor .bandMask:before, .bandMask:after {
+    position:absolute;
+    content: "";
+    left: 38px;
+    top: -2px;
+    width:40px;
+    height:40px;
+    border: 2px solid #aaaaaa;
+    border-radius: 60px;
+}
+
+.resistor .bandMask:after {
+    left: 104px;
+}
+
 .resistor .centerFront:before {
     position:absolute;
     content: "";
@@ -74,59 +103,37 @@
     background: -webkit-gradient(linear, 0% 10%, 0% 60%,  from(#f5f5dc), to(#666600));
 }
 
-.resistor .firstBand:before {
+.resistor .firstBand {
     position:absolute;
     content: "";
-    background: #000000;
+    background-color: #000000;
     top: 0px;
     left: 58px;
     width:10px;
     height:40px;
 }
 
-.resistor .firstBand:after {
+.resistor .fourthBand {
     position:absolute;
     content: "";
-    left: 38px;
-    top: -2px;
-    width:40px;
-    height:40px;
-    border: 2px solid #aaaaaa;
-    border-radius: 60px;
-}
-
-.resistor .fourthBand:before {
-    position:absolute;
-    content: "";
-    background: #ffcc00;
+    background-color: #CFB53B;
     top: 0px;
     left: 118px;
     width:10px;
     height:40px;
 }
 
-.resistor .fourthBand:after {
+.resistor .secondBand, .thirdBand {
     position:absolute;
     content: "";
-    left: 104px;
-    top: -2px;
-    width:40px;
-    height:40px;
-    border: 2px solid #aaaaaa;
-    border-radius: 60px;
-}
-
-.resistor .secondBand:before, .thirdBand:before {
-    position:absolute;
-    content: "";
-    background: #000000;
+    background-color: #000000;
     top: 4px;
     left: 76px;
     width:10px;
     height:32px;
 }
 
-.resistor .thirdBand:before {
+.resistor .thirdBand {
     left: 94px;
 }
 
@@ -145,4 +152,64 @@
 .resistor:after {
     background: -webkit-gradient(radial, 30% 0%, 10, 30% 0%, 30, from(#f5f5dc), to(#666600));
     left: 106px;
+}
+
+
+.resistor h2 {
+    position: absolute;
+    height: 20px;
+    font-family: Delicious-Heavy;
+    color: #999999;
+    user-select: none;
+    -webkit-user-select: none;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-shadow: #dddddd 1px 1px, #666666 -1px -1px;
+}
+
+.resistor .ohm100 {
+    top:50px;
+}
+.ohm100:hover ~ .firstBand {
+    background-color: #964B00;
+}
+.ohm100:hover ~ .thirdBand {
+    background-color: #964B00;
+}
+
+.resistor .ohm240 {
+    top:70px;
+}
+.ohm240:hover ~ .firstBand {
+    background-color: #ff0000;
+}
+.ohm240:hover ~ .secondBand {
+    background-color: #ffff00;
+}
+.ohm240:hover ~ .thirdBand {
+    background-color: #964B00;
+}
+
+.resistor .ohm470 {
+    top:90px;
+}
+.ohm470:hover ~ .firstBand {
+    background-color: #ffff00;
+}
+.ohm470:hover ~ .secondBand {
+    background-color: #EE82EE;
+}
+.ohm470:hover ~ .thirdBand {
+    background-color: #964B00;
+}
+
+.resistor .kOhm100 {
+    top:110px;
+}
+.kOhm100:hover ~ .firstBand {
+    background-color: #964B00;
+}
+.kOhm100:hover ~ .thirdBand {
+    background-color: #FFFF00;
 }
