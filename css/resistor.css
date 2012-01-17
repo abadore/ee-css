@@ -155,9 +155,10 @@
 }
 
 
-.resistor h2 {
+.resistor label {
     position: absolute;
     height: 20px;
+    left: 20px;
     font-family: Delicious-Heavy;
     color: #999999;
     user-select: none;
@@ -171,45 +172,65 @@
 .resistor .ohm100 {
     top:50px;
 }
-.ohm100:hover ~ .firstBand {
+.ohm100:hover ~ .firstBand, .ohm100:checked ~ .firstBand {
     background-color: #964B00;
 }
-.ohm100:hover ~ .thirdBand {
+.ohm100:hover ~ .secondBand, .ohm100:checked ~ .secondBand {
+    background-color: #000000;
+}
+.ohm100:hover ~ .thirdBand, .ohm100:checked ~ .thirdBand {
     background-color: #964B00;
 }
 
 .resistor .ohm240 {
     top:70px;
 }
-.ohm240:hover ~ .firstBand {
+.ohm240:hover ~ .firstBand, .ohm240:checked ~ .firstBand {
     background-color: #ff0000;
 }
-.ohm240:hover ~ .secondBand {
+.ohm240:hover ~ .secondBand, .ohm240:checked ~ .secondBand {
     background-color: #ffff00;
 }
-.ohm240:hover ~ .thirdBand {
+.ohm240:hover ~ .thirdBand, .ohm240:checked ~ .thirdBand {
     background-color: #964B00;
 }
 
 .resistor .ohm470 {
     top:90px;
 }
-.ohm470:hover ~ .firstBand {
+.ohm470:hover ~ .firstBand, .ohm470:checked ~ .firstBand {
     background-color: #ffff00;
 }
-.ohm470:hover ~ .secondBand {
+.ohm470:hover ~ .secondBand, .ohm470:checked ~ .secondBand {
     background-color: #EE82EE;
 }
-.ohm470:hover ~ .thirdBand {
+.ohm470:hover ~ .thirdBand, .ohm470:checked ~ .thirdBand {
     background-color: #964B00;
 }
 
 .resistor .kOhm100 {
     top:110px;
 }
-.kOhm100:hover ~ .firstBand {
+.kOhm100:hover ~ .firstBand, .kOhm100:checked ~ .firstBand {
     background-color: #964B00;
 }
-.kOhm100:hover ~ .thirdBand {
+.kOhm100:hover ~ .secondBand, .kOhm100:checked ~ .secondBand {
+    background-color: #000000;
+}
+.kOhm100:hover ~ .thirdBand, .kOhm100:checked ~ .thirdBand {
     background-color: #FFFF00;
+}
+
+.resistor input {
+    position: absolute;
+}
+
+.resistor .ohm200 {
+    top:90px;
+}
+.ohm200:checked ~ .firstBand {
+    background-color: #ff0000;
+}
+.ohm200:checked ~ .thirdBand {
+    background-color: #964B00;
 }
